@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+  <title>Math Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <script type="text/javascript" src="play.js"></script>
+  <script type="text/javascript" src="../lib/Timer.js"></script>
+  <script type="text/javascript" src="../lib/AnimationHandler.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:200" rel="stylesheet"/>
+  <!-- <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet"/> -->
+</head>
+
+<body onload="setup()">
+
+  <section id="content">
+
+    <article id="problem">
+
+      <div id="x">
+        #
+      </div>
+
+      <div id="op">
+      &#186
+      </div>
+
+      <div id="y">
+        #
+      </div>
+    </article>
+
+    <hr class="separator"/>
+    <br/>
+
+    <article id="info">
+
+      <section id="time">
+
+          <div id="iTime">
+            0:00:00
+          </div>
+
+          <div id="sTime">
+            0:00:00
+          </div>
+
+          <div id="tTime">
+            0:00:00
+          </div>
+      </section>
+
+      <hr class="separator"/>
+
+      <section id="answer">
+        <input type="text" id="a" onkeydown="keyEnter(event)" placeholder="Answer"/>
+      </section>
+
+    </article>
+  </section>
+</body>

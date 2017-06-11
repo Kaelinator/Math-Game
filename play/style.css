@@ -1,0 +1,112 @@
+
+#content {
+
+  width: 60%;
+  margin: 0 auto;
+  font-family: 'Work Sans', sans-serif;
+}
+
+#problem {
+
+  text-align: center;
+  font-size: 6em;
+  padding: 2%;
+}
+
+#x, #y, #op {
+
+  display: inline-block;
+  color: #666;
+  border-radius: 3px;
+}
+
+#x, #y {
+
+  padding: 3%;
+  box-shadow: 2px 2px 5px #888;
+  background-color: #F0FFF0;
+}
+
+#op {
+
+  width: 70px;
+  color: white;
+  background-color: #52B788;
+  box-shadow: 2px 2px 5px #888;
+}
+
+#time {
+
+  margin: 0 auto;
+  width: 90%;
+  padding: 20px;
+  font-size: 2em;
+  }
+  #sTime, #tTime, #iTime {
+
+    padding: 10px;
+    }
+    #sTime {
+
+        font-size: 3em;
+      }
+      #tTime {
+
+        font-size: 1.5em;
+        width: 20%;
+        border-top-color: #52B788;
+        border-top-width: 1px;
+        border-top-style: solid;
+        }
+        #iTime {
+
+          font-size: 2em;
+          float: right;
+          display: none; /* for later implementation */
+        }
+
+.timeAlert {
+
+  color: red;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.timeInitial {
+
+  color: black;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+#answer {
+
+  text-align: center;
+  padding: 10px;
+  }
+  #a {
+
+    font-family: inherit;
+    font-size: 5em;
+    width: 70%;
+    padding-left: 20px;
+    border: none;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #666;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    }
+    #a:focus {
+
+      outline: none;
+      border-bottom-color: #52B788;
+      border-bottom-width: 4px;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+
+.separator {
+
+  width: 90%;
+}

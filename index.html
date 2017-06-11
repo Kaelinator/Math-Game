@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+  <title>Math Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <script type="text/javascript" src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:200" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet"/>
+</head>
+<body>
+
+  <section id="content">
+    <article id="equation">
+
+      <form id="options" action="play/index.html">
+
+        <div id="x" onclick="range('xDrop')">
+          X
+          <p id="xRange">0 to 100</p>
+        </div>
+
+        <div id="opWrap">
+          <select id="operation" name="op">
+            <option value="0">+</option>
+            <option value="1">-</option>
+            <option value="2">&times</option>
+            <option value="3">&divide</option>
+          </select>
+        </div>
+
+        <div id="y" onclick="range('yDrop')">
+          Y
+          <p id="yRange">0 to 100</p>
+        </div>
+
+        <hr class="separator"/>
+        <br/>
+
+        <aside id="integers">
+          <div class="input">
+            <label class="switch">
+              <input type="checkbox" name="ia" checked>
+              <div class="slider"></div>
+            </label>
+          </div>
+          <div class="prompt">
+            <label>Only integers</label>
+          </div>
+        </aside>
+
+        <hr class="separator"/>
+        <br/>
+        <input type="submit" id="begin" value="Begin">
+      </form>
+    </article>
+  </section>
+
+</body>
