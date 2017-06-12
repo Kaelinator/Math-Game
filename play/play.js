@@ -69,8 +69,6 @@ function newProblem() {
 
 function keyEnter(event) {
 
-  console.log(event.keyCode);
-
   if (!((event.keyCode >= 48 && event.keyCode <= 57 && !event.shiftKey) || // numeric row
       (event.keyCode >= 96 && event.keyCode <= 105) || // num pad
       (event.keyCode == 110 || event.keyCode == 190) || // decimal
@@ -93,8 +91,18 @@ function keyEnter(event) {
 
   animate($sTime, ["timeAlert", "timeInitial"], [250, 250], 4);
 
-  /* another one */
-  setTimeout(newProblem, intermittent);
+  if (answers.length >= 2) {
+    /* end game */
+
+    sessionStorage.clear();
+    sessionStorage.setItem("inputs", inputs);
+    sessionStorage.setItem("splits", splits);
+    sessionStorage.setItem("answers", answers);
+    window.location.replace("../results/index.html");
+  } else {
+    /* another one */
+    setTimeout(newProblem, intermittent);
+  }
 }
 
 function calculateAnswer(x, y, op) {
