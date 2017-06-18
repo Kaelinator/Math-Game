@@ -5,6 +5,7 @@ var operation;
 var integersOnly;
 var settings;
 
+var problems = [];
 var inputs = [];
 var splits = [];
 var answers = [];
@@ -47,10 +48,11 @@ function newProblem() {
   var x = Math.floor(Math.random() * 100) + 1;
   var y = Math.floor(Math.random() * 100) + 1;
 
-  var $op = document.getElementById('op');
-  var $x = document.getElementById('x');
-  var $y = document.getElementById('y');
+  var $op = document.getElementById("op");
+  var $x = document.getElementById("x");
+  var $y = document.getElementById("y");
 
+  problems.push(x + " " + operation + " " + y);
   answers.push(calculateAnswer(x, y, settings.op));
 
   $op.innerHTML = operation;
@@ -95,6 +97,7 @@ function keyEnter(event) {
     /* end game */
 
     sessionStorage.clear();
+    sessionStorage.setItem("problems", problems);
     sessionStorage.setItem("inputs", inputs);
     sessionStorage.setItem("splits", splits);
     sessionStorage.setItem("answers", answers);
@@ -109,16 +112,16 @@ function calculateAnswer(x, y, op) {
 
   switch (op) {
 
-    case '0':
+    case "0":
       return x + y;
 
-    case '1':
+    case "1":
       return x - y;
 
-    case '2':
+    case "2":
       return x * y;
 
-    case '3':
+    case "3":
       return x / y;
   }
 }

@@ -1,9 +1,29 @@
 <!DOCTYPE html>
 
 <head>
-  <script type="text/javascript" src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="results.css"/>
+  <script type="text/javascript" src="results.js"></script>
 </head>
 
 <body onLoad="displayResults()">
 
+  <table id="results">
+    <thead id="fields">
+      <tr>
+        <th>#</th>
+        <th>Problem</th>
+        <th>Answer</th>
+        <th>Split (s)</th>
+        <th>Error (%)</th>
+      </tr>
+    </thead>
+
+    <tbody id="feedback">
+      <!-- Literal values -->
+    </tbody>
+
+    <tfoot id="summary">
+      <!-- Average values -->
+    </tfoot>
+  </table>
 </body>
