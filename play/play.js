@@ -51,6 +51,7 @@ function newProblem() {
   var $op = document.getElementById("op");
   var $x = document.getElementById("x");
   var $y = document.getElementById("y");
+  var $pCount = document.getElementById("problem-count");
 
   problems.push(x + " " + operation + " " + y);
   answers.push(calculateAnswer(x, y, settings.op));
@@ -58,6 +59,7 @@ function newProblem() {
   $op.innerHTML = operation;
   $x.innerHTML = x;
   $y.innerHTML = y;
+  $pCount.innerHTML = "#" + answers.length;
 
   $answer.value = "";
   $answer.disabled = false;
@@ -93,7 +95,7 @@ function keyEnter(event) {
 
   animate($sTime, ["timeAlert", "timeInitial"], [250, 250], 4);
 
-  if (answers.length >= 2) {
+  if (answers.length >= settings.c) {
     /* end game */
 
     sessionStorage.clear();

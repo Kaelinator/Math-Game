@@ -1,31 +1,72 @@
 
+body {
+
+  font-family: 'Nunito', sans-serif;
+}
+
 table#results {
 
   width: 60%;
   margin: 0 auto;
-  background-color: #FFFFFF;
+  background-color: #FFF;
   border-radius: 3px;
   box-shadow: 2px 2px 5px #888;
+  border-collapse: collapse;
+  font-size: 1.5em;
+}
+
+th, td {
+
+  padding: 10px;
 }
 
 tr {
 
-  border-top: 1px solid #999;
-}
+  border-top: 1px solid #AAA;
+  }
+  #fields tr {
 
-#fields tr {
+    border-top: none;
+    color: #999;
+  }
 
-  border-top: none;
-}
+tr .number {
 
-table#results, th, td {
+  text-align: left;
+  width: 10%;
+  padding-left: 2%;
+  padding-right: 2%;
+  color: #222;
+  }
+  tr .problem {
 
-  border-collapse: collapse;
-  padding: 10px;
-}
+    text-align: left;
+    width: 40%;
+    padding-left: 2%;
+    padding-right: 2%;
+    color: #666;
+    }
+    tr .answer {
 
-thead#fields {
+      text-align: right;
+      width: 15%;
+      padding-left: 2%;
+      padding-right: 2%;
+      color: #666;
+      }
+      tr .split {
 
-  /*color: white;*/
-  /*background-color: blue;*/
-}
+        text-align: right;
+        width: 15%;
+        padding-left: 2%;
+        padding-right: 2%;
+        color: #666;
+        }
+        tr .error {
+
+          text-align: right;
+          width: 15%;
+          padding-left: 2%;
+          padding-right: 2%;
+          color: #666;
+        }

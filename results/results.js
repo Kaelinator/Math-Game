@@ -6,7 +6,7 @@ function displayResults() {
 
   $feedback = document.getElementById("feedback");
   $summary = document.getElementById("summary");
-  labels = document.getElementById("results").rows[0].cells;
+  labels = ['number', 'problem', 'answer', 'split', 'error'];
 
   var problems = sessionStorage.getItem("problems").split(",");
   var inputs = sessionStorage.getItem("inputs").split(",");
@@ -47,6 +47,7 @@ function displayResults() {
       var index = i * labels.length + j;
 
       td.appendChild(document.createTextNode(information[index]));
+      td.classList.add(labels[j]);
       tr.appendChild(td);
     }
     $feedback.appendChild(tr);
@@ -69,6 +70,10 @@ function displayResults() {
 
   splAvg.appendChild(document.createTextNode(avgSplit.toFixed(2) + "s"));
   errAvg.appendChild(document.createTextNode(avgError.toFixed(1) + "%"));
+
+  label.classList.add(labels[0]);
+  splAvg.classList.add(labels[labels.length - 2]);
+  errAvg.classList.add(labels[labels.length - 1]);
 
   sumRow.appendChild(label);
   sumRow.appendChild(splAvg);

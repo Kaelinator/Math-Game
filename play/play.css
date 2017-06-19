@@ -35,7 +35,7 @@
   box-shadow: 2px 2px 5px #888;
 }
 
-#time {
+#info {
 
   margin: 0 auto;
   width: 90%;
@@ -58,11 +58,11 @@
         border-top-width: 1px;
         border-top-style: solid;
         }
-        #iTime {
+        #problem-count {
 
           font-size: 2em;
           float: right;
-          display: none; /* for later implementation */
+          /*display: none; /* for later implementation */
         }
 
 .timeAlert {

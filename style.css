@@ -103,6 +103,34 @@ aside {
   width: 70%;
 }
 
+/* input types */
+
+.nud {
+
+  position: relative;
+  height: 34px;
+  width: 60px;
+  font-family: inherit;
+  font-size: 1em;
+  text-align: center;
+  background-color: inherit;
+  border: none;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #666;
+  vertical-align: middle;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  }
+  .nud:focus {
+
+    outline: none;
+    border-bottom-color: #52B788;
+    border-bottom-width: 4px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
 /* The following is from w3schools */
 .switch {
 
