@@ -63,7 +63,7 @@ select {
   }
   #x, #y {
 
-    width: 90px;
+    width: 150px;
     font-size: 3em;
     box-shadow: 2px 2px 5px #888;
     background-color: #F0FFF0;
@@ -107,9 +107,9 @@ aside {
 
 .nud {
 
-  position: relative;
-  height: 34px;
+  /*position: relative;*/
   width: 60px;
+  height: 34px;
   font-family: inherit;
   font-size: 1em;
   text-align: center;
@@ -130,6 +130,37 @@ aside {
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
+
+.small-nud {
+
+  width: 70px;
+  height: 20px;
+}
+
+.radio-list {
+
+  list-style: none;
+  text-align: left;
+  font-size: 0.5em;
+  margin-top: -10px;
+  margin-left: -50px;
+  }
+  input[type=radio] {
+    display: none;
+    }
+    input[type=radio] + label span {
+      display: inline-block;
+      border-radius: 5px;
+      width: 0px;
+      height: 0px;
+      background-color: #52B788;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+      }
+      input[type=radio]:checked + label span {
+        width: 10px;
+        height: 10px;
+      }
 
 /* The following is from w3schools */
 .switch {

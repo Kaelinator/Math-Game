@@ -16,7 +16,11 @@
 
         <div id="x" onclick="range('xDrop')">
           X
-          <p id="xRange">0 to 100</p>
+          <p id="xRange">
+            <input class="nud small-nud" type="number" name="xmn" value="0"/> <!-- x-minimum -->
+            to
+            <input class="nud small-nud" type="number" name="xmx" value="100"/> <!-- x-maximum -->
+          </p>
         </div>
 
         <div id="opWrap">
@@ -30,7 +34,11 @@
 
         <div id="y" onclick="range('yDrop')">
           Y
-          <p id="yRange">0 to 100</p>
+          <p id="yRange">
+            <input class="nud small-nud" type="number" name="ymn" value="0"/> <!-- y-minimum -->
+            to
+            <input class="nud small-nud" type="number" name="ymx" value="100"/> <!-- y-maximum -->
+          </p>
         </div>
 
         <hr class="separator"/>
@@ -47,7 +55,34 @@
 
         <br/>
 
-        <aside id="integers">
+        <aside id="number-type">
+          <div class="input">
+            <ul class="radio-list">
+              <li>
+                <!-- Natural Numbers: { 1, 2, 3 } -->
+                <input type="radio" name="nt" value="nn" id="nn" checked/>
+                <label for="nn"><span></span>All Natural Numbers</label>
+              </li>
+
+              <li>
+                <!-- Integers: { -3, -2, -1, 0, 1, 2, 3 } -->
+                <input type="radio" name="nt" value="i" id="i"/>
+                <label for="i"><span></span>All Integers</label>
+              </li>
+
+              <li>
+                <!-- Real Numbers: { -3, -1/2, -1, 0, 1/2, 3 } -->
+                <input type="radio" name="nt" value="rn" id="rn"/>
+                <label for="rn"><span></span>All Real Numbers</label>
+              </li>
+            </ul>
+          </div>
+          <div class="prompt">
+            <label>Number Type</label>
+          </div>
+        </aside>
+
+        <!-- <aside id="integers">
           <div class="input">
             <label class="switch">
               <input type="checkbox" name="ia" checked>
@@ -57,7 +92,7 @@
           <div class="prompt">
             <label>Only integers</label>
           </div>
-        </aside>
+        </aside> -->
 
         <hr class="separator"/>
         <br/>
