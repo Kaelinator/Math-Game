@@ -57,8 +57,6 @@ function displayResults() {
   avgSplit /= problems.length;
   avgError /= problems.length;
 
-  console.log(avgSplit, avgError);
-
   var sumRow = document.createElement('tr');  // summary row
   var label = document.createElement('td');
 
