@@ -64,6 +64,7 @@ select {
   #x, #y {
 
     width: 150px;
+    height: 150px;
     font-size: 3em;
     box-shadow: 2px 2px 5px #888;
     background-color: #F0FFF0;
@@ -107,7 +108,6 @@ aside {
 
 .nud {
 
-  /*position: relative;*/
   width: 60px;
   height: 34px;
   font-family: inherit;

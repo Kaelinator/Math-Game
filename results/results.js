@@ -1,4 +1,7 @@
 
+var ACCURACY_WEIGHT = 5;
+var SPLIT_WEIGHT = 1;
+
 var labels;
 var $feedback;
 
@@ -6,7 +9,7 @@ function displayResults() {
 
   $feedback = document.getElementById("feedback");
   $summary = document.getElementById("summary");
-  labels = ['number', 'problem', 'answer', 'split', 'error'];
+  labels = ['number', 'problem', 'answer', 'split', 'accuracy'];
 
   var problems = sessionStorage.getItem("problems").split(",");
   var inputs = sessionStorage.getItem("inputs").split(",");
@@ -14,7 +17,7 @@ function displayResults() {
   var splits = sessionStorage.getItem("splits").split(",");
 
   var avgSplit = 0;
-  var avgError = 0;
+  var avgAccuracy = 0;
 
   var information = [];
   for (var q = 0; q < problems.length; q++) {
@@ -23,39 +26,51 @@ function displayResults() {
     var equation = problems[q] + " = " + answers[q];  // a + b = c
     var split = (splits[q] / 1000);      // 11.3
 
-    /* calculate percent error */
-    var a = Math.abs(answers[q] - inputs[q]);       // |Theoretical - Experimental|
-    var error = (a / answers[q]) * 100;             // over Theoretical * 100
+    /* calculate percent accuracy */
+    var accuracy = answers[q] / inputs[q];
+    accuracy = (accuracy > 1) ? 1 / accuracy : accuracy; // ensure a number between 0 & 1
+    accuracy *= 100;
 
     information.push(q + 1);
     information.push(equation);
     information.push(inputs[q]);
     information.push(split.toFixed(2) + "s");
-    information.push(error.toFixed(1) + "%");
+    information.push(accuracy.toFixed(1) + "%");
+    information.push(euclideanDistance(split, accuracy));
 
     avgSplit += split;
-    avgError += error;
+    avgAccuracy += accuracy;
   }
 
   /* display */
   for (var i = 0; i < problems.length; i++) {
     var tr = document.createElement('tr');
 
-    for (var j = 0; j < labels.length; j++) {
+    for (var j = 0; j < labels.length + 1; j++) {
 
-      var td = document.createElement('td');
-      var index = i * labels.length + j;
+      var index = i * (labels.length + 1) + j;
 
-      td.appendChild(document.createTextNode(information[index]));
-      td.classList.add(labels[j]);
-      tr.appendChild(td);
+      if (j < labels.length) {
+
+        var td = document.createElement('td');
+        td.appendChild(document.createTextNode(information[index]));
+        td.classList.add(labels[j]);
+        tr.appendChild(td);
+      } else {
+
+        var r = (information[index] * 173 + 82);
+        var g = (information[index] * 72 + 183);
+        var b = (information[index] * 119 + 136);
+
+        tr.style["background-color"] = rgbToHex(r, g, b);
+      }
     }
     $feedback.appendChild(tr);
   }
 
   /* summary */
   avgSplit /= problems.length;
-  avgError /= problems.length;
+  avgAccuracy /= problems.length;
 
   var sumRow = document.createElement('tr');  // summary row
   var label = document.createElement('td');
@@ -67,7 +82,7 @@ function displayResults() {
   var errAvg = document.createElement('td');
 
   splAvg.appendChild(document.createTextNode(avgSplit.toFixed(2) + "s"));
-  errAvg.appendChild(document.createTextNode(avgError.toFixed(1) + "%"));
+  errAvg.appendChild(document.createTextNode(avgAccuracy.toFixed(1) + "%"));
 
   label.classList.add(labels[0]);
   splAvg.classList.add(labels[labels.length - 2]);
@@ -78,4 +93,20 @@ function displayResults() {
   sumRow.appendChild(errAvg);
 
   $summary.appendChild(sumRow);
+}
+
+function euclideanDistance(split, accuracy) {
+
+  var idealSplit = 0 * SPLIT_WEIGHT;
+  var idealAccuracy = 100 * ACCURACY_WEIGHT;
+
+  accuracy *= ACCURACY_WEIGHT;
+  split *= SPLIT_WEIGHT;
+
+  return 1 / (Math.pow(idealSplit - split, 2) + Math.pow(idealAccuracy - accuracy, 2));
+}
+
+function rgbToHex(r, g, b) {
+  var rgb = b | (g << 8) | (r << 16);
+  return "#" + (0x1000000 | rgb).toString(16).substring(1);
 }
