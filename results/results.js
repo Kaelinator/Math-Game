@@ -19,6 +19,9 @@ function displayResults() {
   var avgSplit = 0;
   var avgAccuracy = 0;
 
+  var minDistance = 100;
+  var maxDistance = 0;
+
   var information = [];
   for (var q = 0; q < problems.length; q++) {
     /* feed some information */
@@ -31,12 +34,17 @@ function displayResults() {
     accuracy = (accuracy > 1) ? 1 / accuracy : accuracy; // ensure a number between 0 & 1
     accuracy *= 100;
 
+    var distance = euclideanDistance(split, accuracy);
+
     information.push(q + 1);
     information.push(equation);
     information.push(inputs[q]);
     information.push(split.toFixed(2) + "s");
     information.push(accuracy.toFixed(1) + "%");
-    information.push(euclideanDistance(split, accuracy));
+    information.push(distance);
+
+    minDistance = (distance < minDistance) ? distance : minDistance;
+    maxDistance = (distance > maxDistance) ? distance : maxDistance;
 
     avgSplit += split;
     avgAccuracy += accuracy;
@@ -58,9 +66,9 @@ function displayResults() {
         tr.appendChild(td);
       } else {
 
-        var r = (information[index] * 173 + 82);
-        var g = (information[index] * 72 + 183);
-        var b = (information[index] * 119 + 136);
+        var r = map(information[index], minDistance, maxDistance, 255, 82);
+        var g = map(information[index], minDistance, maxDistance, 255, 183);
+        var b = map(information[index], minDistance, maxDistance, 255, 136);
 
         tr.style["background-color"] = rgbToHex(r, g, b);
       }
@@ -104,6 +112,10 @@ function euclideanDistance(split, accuracy) {
   split *= SPLIT_WEIGHT;
 
   return 1 / (Math.pow(idealSplit - split, 2) + Math.pow(idealAccuracy - accuracy, 2));
+}
+
+function map(value, low1, high1, low2, high2) {
+    return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
 }
 
 function rgbToHex(r, g, b) {
