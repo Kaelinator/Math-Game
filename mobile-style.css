@@ -1,7 +1,7 @@
 
 #content {
 
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -63,7 +63,7 @@ select {
   }
   #x, #y {
 
-    width: 150px;
+    width: 50%;
     height: 150px;
     font-size: 3em;
     box-shadow: 2px 2px 5px #888;
@@ -76,15 +76,18 @@ select {
       color: #222;
       font-size: 0.2em;
       margin: -10px;
-    }
+      }
+      #opWrap {
+
+        width: 50%;
+      }
 
 aside {
 
-  padding: 2%;
-  padding-top: 2%;
-  padding-bottom: 5%;
+  padding: 5%;
   background-color: #F0FFF0;
-  width: 50%;
+  width: 90%;
+  height: 40px;
   margin: 0 auto;
   border-radius: 3px;
   box-shadow: 2px 2px 5px #888;
@@ -92,6 +95,8 @@ aside {
   }
   .prompt {
 
+    font-size: 0.6em;
+    font-weight: 600;
     float: right;
     }
     .input {
@@ -101,7 +106,7 @@ aside {
 
 .separator {
 
-  width: 70%;
+  width: 100%;
 }
 
 /* input types */
@@ -133,8 +138,9 @@ aside {
 
 .small-nud {
 
-  width: 70px;
-  height: 18px;
+  width: 25%;
+  height: 10%;
+  font-size: 0.7em;
 }
 
 .radio-list {

@@ -70,7 +70,9 @@ function setup() {
   pool = generatePool(numberType, settings.op, xMin, xMax, yMin, yMax);
 
   if (!pool || pool === -1)  // no compatible questions
-    document.location.replace("../index.html");
+    // document.location.replace("../index.html");
+
+  console.log(pool);
 
   /* display first problem */
   newProblem();
@@ -101,8 +103,6 @@ function newProblem() {
 }
 
 function keyEnter(event) {
-
-  console.log(event.keyCode);
 
   if (!((event.keyCode >= 48 && event.keyCode <= 57 && !event.shiftKey) || // numeric row
   (event.keyCode >= 96  && event.keyCode <= 105) || // num pad

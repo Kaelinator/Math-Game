@@ -1,0 +1,72 @@
+
+body {
+
+  font-family: 'Nunito', sans-serif;
+}
+
+table#results {
+
+  width: 100%;
+  margin: 0 auto;
+  background-color: #FFF;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px #888;
+  border-collapse: collapse;
+  font-size: 2em;
+}
+
+th, td {
+
+  padding: 10px;
+}
+
+tr {
+
+  border-top: 1px solid #AAA;
+  }
+  #fields tr {
+
+    border-top: none;
+    color: #999;
+  }
+
+tr .number {
+
+  text-align: left;
+  width: 10%;
+  padding-left: 2%;
+  padding-right: 2%;
+  color: #222;
+  }
+  tr .problem {
+
+    text-align: left;
+    width: 40%;
+    padding-left: 2%;
+    padding-right: 2%;
+    color: #666;
+    }
+    tr .answer {
+
+      text-align: right;
+      width: 15%;
+      padding-left: 2%;
+      padding-right: 2%;
+      color: #666;
+      }
+      tr .split {
+
+        text-align: right;
+        width: 15%;
+        padding-left: 2%;
+        padding-right: 2%;
+        color: #666;
+        }
+        tr .accuracy {
+
+          text-align: right;
+          width: 15%;
+          padding-left: 2%;
+          padding-right: 2%;
+          color: #666;
+        }

@@ -1,5 +1,5 @@
 
-var ACCURACY_WEIGHT = 5;
+var ACCURACY_WEIGHT = 1.15;
 var SPLIT_WEIGHT = 1;
 
 var labels;
@@ -26,7 +26,7 @@ function displayResults() {
   for (var q = 0; q < problems.length; q++) {
     /* feed some information */
 
-    var equation = problems[q] + " = " + answers[q];  // a + b = c
+    var equation = problems[q] + " = " + (Math.round(answers[q] * 1000) / 1000);  // a + b = c
     var split = (splits[q] / 1000);      // 11.3
 
     /* calculate percent accuracy */
