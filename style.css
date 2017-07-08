@@ -84,7 +84,7 @@ aside {
   padding-top: 2%;
   padding-bottom: 5%;
   background-color: #F0FFF0;
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
   border-radius: 3px;
   box-shadow: 2px 2px 5px #888;
@@ -93,6 +93,8 @@ aside {
   .prompt {
 
     float: right;
+    font-weight: 100;
+    font-size: 1.25em;
     }
     .input {
 
@@ -141,7 +143,7 @@ aside {
 
   list-style: none;
   text-align: left;
-  font-size: 0.4em;
+  font-size: 0.6em;
   margin-top: -10px;
   margin-left: -50px;
   }
@@ -163,6 +165,22 @@ aside {
         -webkit-transition: 0.5s;
         transition: 0.5s;
       }
+
+footer {
+
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  font-size: 2em;
+  font-family: 'Raleway', sans-serif;
+  color: #777;
+  /*font-family: 'Work-Sans', sans-serif;*/
+  }
+  footer a {
+    color: #777;
+    text-decoration: none;
+    font-weight: 600;
+  }
 
 /* The following is from w3schools */
 .switch {

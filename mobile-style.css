@@ -170,6 +170,22 @@ aside {
         transition: 0.5s;
       }
 
+footer {
+
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  font-size: 0.75em;
+  font-family: 'Raleway', sans-serif;
+  color: #777;
+  /*font-family: 'Work-Sans', sans-serif;*/
+  }
+  footer a {
+    color: #777;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
 /* The following is from w3schools */
 .switch {
 
