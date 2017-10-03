@@ -30,7 +30,7 @@ function displayResults() {
     var split = (splits[q] / 1000);      // 11.3
 
     /* calculate percent accuracy */
-    var accuracy = answers[q] / inputs[q];
+    var accuracy = (answers[q] == 0) ? 1 : answers[q] / (inputs[q] == 0) ? 1 : inputs[q];
     accuracy = (accuracy > 1) ? 1 / accuracy : accuracy; // ensure a number between 0 & 1
     accuracy *= 100;
 
