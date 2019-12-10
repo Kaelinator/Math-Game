@@ -56,34 +56,34 @@ select {
 
 #x, #y, #opWrap {
 
-    display: inline-block;
-    font-size: 1.5em;
-    padding: 2%;
-    width: auto;
-  }
-  #x, #y {
+  display: inline-block;
+  font-size: 1.5em;
+  padding: 2%;
+  width: auto;
+}
 
-    width: 50%;
-    height: 150px;
-    font-size: 3em;
-    box-shadow: 2px 2px 5px #888;
-    background-color: #F0FFF0;
-    padding: 3%;
-    border-radius: 3px;
-    }
-    #xRange, #yRange {
+#x, #y {
 
-      color: #222;
-      font-size: 0.2em;
-      margin: -10px;
-      }
-      #opWrap {
+  width: 50%;
+  height: 150px;
+  font-size: 3em;
+  box-shadow: 2px 2px 5px #888;
+  background-color: #F0FFF0;
+  padding: 3%;
+  border-radius: 3px;
+}
 
-        width: 50%;
-      }
+#xRange, #yRange {
+  color: #222;
+  font-size: 0.2em;
+  margin: -10px;
+}
+
+#opWrap {
+  width: 50%;
+}
 
 aside {
-
   padding: 5%;
   background-color: #F0FFF0;
   width: 90%;
@@ -93,19 +93,18 @@ aside {
   box-shadow: 2px 2px 5px #888;
   float: none;
   }
-  .prompt {
 
-    font-size: 0.6em;
-    font-weight: 600;
-    float: right;
-    }
-    .input {
+.prompt {
+  font-size: 0.6em;
+  font-weight: 600;
+  float: right;
+}
 
-      float: left;
-    }
+.input {
+  float: left;
+}
 
 .separator {
-
   width: 100%;
 }
 
@@ -126,52 +125,50 @@ aside {
   vertical-align: middle;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  }
-  .nud:focus {
-
-    outline: none;
-    border-bottom-color: #52B788;
-    border-bottom-width: 4px;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-  }
+}
+.nud:focus {
+  outline: none;
+  border-bottom-color: #52B788;
+  border-bottom-width: 4px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
 
 .small-nud {
-
   width: 25%;
   height: 10%;
   font-size: 0.7em;
 }
 
 .radio-list {
-
   list-style: none;
   text-align: left;
   font-size: 0.4em;
   margin-top: -10px;
   margin-left: -50px;
-  }
-  input[type=radio] {
-    display: none;
-    }
-    input[type=radio] + label span {
-      display: inline-block;
-      border-radius: 5px;
-      width: 10px;
-      height: 10px;
-      background-color: #F0FFF0;
-      -webkit-transition: 0.5s;
-      transition: 0.5s;
-      }
-      input[type=radio]:checked + label span {
+}
 
-        background-color: #52B788;
-        -webkit-transition: 0.5s;
-        transition: 0.5s;
-      }
+input[type=radio] {
+  display: none;
+}
+
+input[type=radio] + label span {
+  display: inline-block;
+  border-radius: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #F0FFF0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input[type=radio]:checked + label span {
+  background-color: #52B788;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
 
 footer {
-
   position:fixed;
   left:0px;
   bottom:0px;
@@ -179,55 +176,10 @@ footer {
   font-family: 'Raleway', sans-serif;
   color: #777;
   /*font-family: 'Work-Sans', sans-serif;*/
-  }
-  footer a {
-    color: #777;
-    text-decoration: none;
-    font-weight: 600;
-  }
+}
 
-/* The following is from w3schools */
-.switch {
-
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  }
-  .switch input {
-
-    display:none;
-    }
-    .slider {
-
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    }
-    .slider:before {
-
-      position: absolute;
-      content: "";
-      height: 26px;
-      width: 26px;
-      left: 4px;
-      bottom: 4px;
-      background-color: white;
-      -webkit-transition: 0.4s;
-      transition: 0.4s;
-      }
-      input:checked + .slider {
-
-        background-color: #52B788;
-        }
-        input:checked + .slider:before {
-          -webkit-transform: translateX(26px);
-          -ms-transform: translateX(26px);
-          transform: translateX(26px);
-        }
+footer a {
+  color: #777;
+  text-decoration: none;
+  font-weight: 600;
+}

@@ -1,11 +1,9 @@
 
 body {
-
   font-family: 'Nunito', sans-serif;
 }
 
 table#results {
-
   width: 100%;
   margin: 0 auto;
   background-color: #FFF;
@@ -16,19 +14,17 @@ table#results {
 }
 
 th, td {
-
   padding: 10px;
 }
 
 tr {
-
   border-top: 1px solid #AAA;
-  }
-  #fields tr {
+}
 
-    border-top: none;
-    color: #999;
-  }
+#fields tr {
+  border-top: none;
+  color: #999;
+}
 
 tr .number {
 
@@ -37,36 +33,37 @@ tr .number {
   padding-left: 2%;
   padding-right: 2%;
   color: #222;
-  }
-  tr .problem {
+}
 
-    text-align: left;
-    width: 40%;
-    padding-left: 2%;
-    padding-right: 2%;
-    color: #666;
-    }
-    tr .answer {
+tr .problem {
 
-      text-align: right;
-      width: 15%;
-      padding-left: 2%;
-      padding-right: 2%;
-      color: #666;
-      }
-      tr .split {
+  text-align: left;
+  width: 40%;
+  padding-left: 2%;
+  padding-right: 2%;
+  color: #666;
+}
 
-        text-align: right;
-        width: 15%;
-        padding-left: 2%;
-        padding-right: 2%;
-        color: #666;
-        }
-        tr .accuracy {
+tr .answer {
+  text-align: right;
+  width: 15%;
+  padding-left: 2%;
+  padding-right: 2%;
+  color: #666;
+}
 
-          text-align: right;
-          width: 15%;
-          padding-left: 2%;
-          padding-right: 2%;
-          color: #666;
-        }
+tr .split {
+  text-align: right;
+  width: 15%;
+  padding-left: 2%;
+  padding-right: 2%;
+  color: #666;
+}
+
+tr .accuracy {
+  text-align: right;
+  width: 15%;
+  padding-left: 2%;
+  padding-right: 2%;
+  color: #666;
+}
